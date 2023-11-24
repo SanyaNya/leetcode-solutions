@@ -7,7 +7,7 @@
 //space complexity: O(n) allocating hashtable of nums.size() elements
 
 //time complexity: O(n) just iterating over nums vector when generating
-//nummap and searching in it
+//nummap and searching in it, search in nummap is O(1)
 
 class Solution {
 public:

@@ -4,7 +4,7 @@
 
 //space complexity: O(1) constant, just a few variables
 
-//time complexity: O(n) iterating once over prices vector
+//time complexity: O(n) iterating once over prices vector, all operations in cycle O(1)
 
 class Solution {
 public:
