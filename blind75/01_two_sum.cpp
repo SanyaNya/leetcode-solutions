@@ -4,6 +4,11 @@
 
 //https://leetcode.com/problems/two-sum/
 
+//space complexity: O(n) allocating hashtable of nums.size() elements
+
+//time complexity: O(n) just iterating over nums vector when generating
+//nummap and searching in it
+
 class Solution {
 public:
   //get map of nums with corresponding index

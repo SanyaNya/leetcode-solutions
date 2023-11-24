@@ -2,6 +2,10 @@
 
 //https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 
+//space complexity: O(1) constant, just a few variables
+
+//time complexity: O(n) iterating once over prices vector
+
 class Solution {
 public:
   static int maxProfit(const std::vector<int>& prices)
