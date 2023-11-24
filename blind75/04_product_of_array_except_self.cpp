@@ -17,28 +17,28 @@
 
 class Solution {
 public:
-    static std::vector<int> productExceptSelf(const std::vector<int>& nums) noexcept
+  static std::vector<int> productExceptSelf(const std::vector<int>& nums) noexcept
+  {
+    std::vector<int> res;
+    res.reserve(nums.size());
+
+    //calculate product prefixes
+    int p = 1;
+    for(int n : nums)
     {
-        std::vector<int> res;
-        res.reserve(nums.size());
-
-        //calculate product prefixes
-        int p = 1;
-        for(int n : nums)
-        {
-            res.push_back(p);
-            p *= n;
-        }
-
-        //calculate product suffixes
-        p = 1;
-        auto res_it = res.rbegin();
-        for(auto nums_it = nums.rbegin(); nums_it != nums.rend(); ++nums_it, ++res_it)
-        {
-            *res_it *= p;
-            p *= *nums_it;
-        }
-
-        return res;
+      res.push_back(p);
+      p *= n;
     }
+
+    //calculate product suffixes
+    p = 1;
+    auto res_it = res.rbegin();
+    for(auto nums_it = nums.rbegin(); nums_it != nums.rend(); ++nums_it, ++res_it)
+    {
+      *res_it *= p;
+      p *= *nums_it;
+    }
+
+    return res;
+  }
 };
