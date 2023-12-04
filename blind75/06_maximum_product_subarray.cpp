@@ -21,8 +21,8 @@ public:
 
             //calculate product for positive and negative subarray
             //or start new subarray
-            positive_product *= std::max(n, positive_product*n);
-            negative_product *= std::min(n, negative_product*n);
+            positive_product = std::max(n, positive_product*n);
+            negative_product = std::min(n, negative_product*n);
 
             //check new maximum
             max_p = std::max(max_p, positive_product);
